@@ -8,7 +8,8 @@ namespace Palindromes {
     public static void Main()
     {
       Console.WriteLine("Enter a word: ");
-      string userInput = Console.ReadLine();
+      string userInput = Console.ReadLine().Replace(" ", "");
+      Console.WriteLine(userInput);
       char[] letters = userInput.ToCharArray();
       char[] lettersReversed = userInput.ToCharArray();
       Array.Reverse(lettersReversed);
