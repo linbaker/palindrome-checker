@@ -8,14 +8,12 @@ namespace Palindromes {
     public static void Main()
     {
       Console.WriteLine("Enter a word: ");
-      string userInput = Console.ReadLine().Replace(" ", "");
-      Console.WriteLine(userInput);
-      char[] letters = userInput.ToCharArray();
-      char[] lettersReversed = userInput.ToCharArray();
+      string letters = Console.ReadLine().Replace(" ", "");
+      Console.WriteLine(letters);
+      char[] lettersReversed = letters.ToCharArray();
       Array.Reverse(lettersReversed);
-      string word = new string(letters);
       string wordReversed = new string(lettersReversed);
-      if (word == wordReversed) {
+      if (letters == wordReversed) {
         Console.WriteLine("Palindrome");
       } else {
         Console.WriteLine("Not a Palindrome");
